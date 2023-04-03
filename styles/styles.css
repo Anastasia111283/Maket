@@ -95,7 +95,7 @@
     height: 480px;
 }
 .main__make-business{
-    /* position: relative;*/
+   /* position: relative;*/
     margin: 0 32px 0 0;/*отступ*/
     background: #FFFFFF;
     box-shadow: 5px 20px 50px
@@ -455,6 +455,8 @@
     width: 310px;
     margin: 112px 0 64px 113px;
 }
+
+
 
 
 
