@@ -1,38 +1,44 @@
-.header{
+.header {
     min-height: 400px;
     background-image: url("../content/header_background.png");
     background-size: contain;
     display: flex;
 }
-.container{
+
+.container {
     width: 1140px;
     margin: 0 auto;
 }
-.header__container{
+
+.header__container {
     display: flex;
     flex-direction: column;
 }
-.header__menu{
+
+.header__menu {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     padding: 0;
     margin: 49px 0 0;
 }
-.header__menu li:hover{
+
+.header__menu li:hover {
     opacity: 0.8;
 }
-.header__wrapper{
+
+.header__wrapper {
     flex-grow: 1;
     background-image: url("../content/header_element.png");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: right ;
+    background-position: right;
     margin-top: 115px;
     padding-bottom: 90px;
     margin-bottom: 93px;
 }
-.header__title{
+
+.header__title {
     max-width: 506px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -41,7 +47,8 @@
     letter-spacing: 0.04em;
     color: #1F3F68;
 }
-.header__text{
+
+.header__text {
     margin-top: 39px;
     max-width: 425px;
     font-family: 'Roboto', sans-serif;
@@ -52,7 +59,7 @@
     opacity: 0.6;
 }
 
-.header__button{
+.header__button {
     margin-top: 70px;
     font-family: 'Roboto', sans-serif;
     line-height: 26px;
@@ -67,17 +74,21 @@
     padding: 15px 50px;
     display: inline-block;
 }
-.header__button:hover{
+
+.header__button:hover {
     background: #418bcb
 }
-.main__smart-home{
+
+.main__smart-home {
     position: relative;
 }
-.smart-home__img{
+
+.smart-home__img {
     width: 100%;
     object-fit: cover;
 }
-.smart-home__text{
+
+.smart-home__text {
     position: absolute;
     font-family: 'Roboto', sans-serif;
     font-size: 32px;
@@ -87,13 +98,62 @@
     top: 64px;
     right: 64px;
 }
-.main__apps-wrapper{
+
+.main__apps-wrapper {
     margin-top: 32px;
     display: flex;
     gap: 32px;
 }
-.main__app{
+
+.main__app {
     height: 200px;
-    background-color: blue;
     flex-grow: 1;
+}
+
+.sparklite {
+    position: absolute;
+    max-width: 554px;
+    left: 113px;
+    height: 417px;
+    border-radius: 10px;
+    background: linear-gradient(308.85deg, rgba(66, 165, 245, 0.4) -1.71%, rgba(21, 101, 192, 0.6) 74.54%);
+}
+.car {
+    position: absolute;
+    max-width: 554px;
+    height: 417px;
+    left: 699px;
+    background: linear-gradient(306.48deg, rgba(66, 165, 245, 0.4) 0%, rgba(21, 101, 192, 0.6) 97.81%);
+    border-radius: 10px;
+}
+.sparklite_text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto',sans-serif;
+    top:32px;
+    margin-left: 32px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+
+}
+.iphonex__img{
+    margin-top: 0;
+    max-width: 554px;
+    left: 23.73px;
+    }
+.car_text{
+    position: absolute;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    left: 731px;
+    top: 1360px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+
 }
