@@ -3,6 +3,7 @@
     background-image: url("../content/header_background.png");
     background-size: contain;
     display: flex;
+    width: 1366px;
 }
 
 .container {
@@ -100,14 +101,10 @@
 }
 
 .main__apps-wrapper {
+    position: relative;
     margin-top: 32px;
     display: flex;
     gap: 32px;
-}
-
-.main__app {
-    height: 200px;
-    flex-grow: 1;
 }
 
 .sparklite {
@@ -118,19 +115,22 @@
     border-radius: 10px;
     background: linear-gradient(308.85deg, rgba(66, 165, 245, 0.4) -1.71%, rgba(21, 101, 192, 0.6) 74.54%);
 }
-.car {
-    position: absolute;
-    max-width: 554px;
+
+.main__sparklite_app {
     height: 417px;
-    left: 699px;
-    background: linear-gradient(306.48deg, rgba(66, 165, 245, 0.4) 0%, rgba(21, 101, 192, 0.6) 97.81%);
+    width: 554px;
+    display: block;
+    position: relative;
     border-radius: 10px;
+    background: url("../content/main.png") center no-repeat,
+    url("../content/iphonex.png") 0 no-repeat;
 }
+
 .sparklite_text {
     position: absolute;
     color: rgb(255, 255, 255);
-    font-family: 'Roboto',sans-serif;
-    top:32px;
+    font-family: 'Roboto', sans-serif;
+    top: 32px;
     margin-left: 32px;
     font-style: normal;
     font-weight: 400;
@@ -139,21 +139,47 @@
     letter-spacing: 0.05em;
 
 }
-.iphonex__img{
-    margin-top: 0;
-    max-width: 554px;
-    left: 23.73px;
-    }
-.car_text{
+
+.main__car__app {
+    width: 554px;
+    height: 417px;
+    display: block;
+    position: relative;
+    border-radius: 10px;
+    background: url("../content/main.png") center no-repeat,
+    url("../content/upload.png") 0 no-repeat;
+}
+
+.car_text {
     position: absolute;
-    color:white;
+    color: white;
     font-family: 'Roboto', sans-serif;
-    left: 731px;
-    top: 1360px;
+    left: 32px;
+    top: 32px;
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
     line-height: 46px;
     letter-spacing: 0.05em;
+}
+
+.upload {
+    border-radius: 10px;
+    position: absolute;
+    width: 554px;
+    height: 417px;
+    left: 699px;
 
 }
+.footer {
+    background: #316099;
+    min-height: 657px;
+    margin: 0 auto;
+    width: 1366px ;
+}
+.footer_container {
+    margin: 112px ;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+   }
