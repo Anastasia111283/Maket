@@ -116,16 +116,6 @@
     background: linear-gradient(308.85deg, rgba(66, 165, 245, 0.4) -1.71%, rgba(21, 101, 192, 0.6) 74.54%);
 }
 
-.main__sparklite_app {
-    height: 417px;
-    width: 554px;
-    display: block;
-    position: relative;
-    border-radius: 10px;
-    background: url("../content/main.png") center no-repeat,
-    url("../content/iphonex.png") 0 no-repeat;
-}
-
 .sparklite_text {
     position: absolute;
     color: rgb(255, 255, 255);
@@ -140,14 +130,13 @@
 
 }
 
-.main__car__app {
-    width: 554px;
-    height: 417px;
-    display: block;
+.main__cart{
     position: relative;
     border-radius: 10px;
-    background: url("../content/main.png") center no-repeat,
-    url("../content/upload.png") 0 no-repeat;
+    width: 100%;
+}
+.main__image{
+    width: 100%;
 }
 
 .car_text {
@@ -171,15 +160,56 @@
     left: 699px;
 
 }
+
 .footer {
     background: #316099;
     min-height: 657px;
     margin: 0 auto;
-    width: 1366px ;
+    width: 1366px;
 }
+
 .footer_container {
-    margin: 112px ;
+    margin: 112px;
     position: relative;
     display: flex;
     flex-direction: column;
+}
+
+.footer_title {
+    margin-top: 91px;
+    left: 113px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.footer_button {
+    width: 236.63px;
+    height: 56px;
+    margin-left: 1015px;
+    background: #5A98D0;
+    top: 195px;
+    text-align: center;
+}
+
+.button {
+    width: 76.37px;
+    height: 26px;
+    top: 165px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
    }
+
+ol {
+    display: flex;
+    justify-content: space-between;
+}
