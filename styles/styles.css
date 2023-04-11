@@ -4,36 +4,64 @@
     background-image: url("../content/header_background.png");
     background-size: contain; /*для видимости картинки*/
     display: flex;/*растянулись элементы*/
-    width: 1366px;
+    margin: 0 auto;
+}
+.header_contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 0 auto;
 }
 .container{ /*задан размер для верхней части для всех элементов*/
-    width: 1140px;/*ширина*/
     margin: 0 auto; /*центрировать*/
+    width: 100%;
 }
 .header__container{ /*заданы одни свойства*/
     display: flex; /*логотипы стали в ряд*/
     flex-direction: column; /*стали друг под другом*/
+    margin: 0 auto;
 }
 .header__menu{ /*логотипы*/
     list-style-type: none; /*убрать маркеры*/
     display: flex; /*элементы стали рядом*/
     justify-content: space-between; /*разнести элементы по краям*/
-    padding: 0;/*убрать боковой padding*/
-    margin: 49px 0 0;/*отступ сверху*/
+    d-size: contain;/*картинка попадала по высоте*/
+    background-position: right ;/*справо*/
+    margin: 42px 0 0;
 }
 .header__menu li:hover{
+    opacity: 0.8;/*осветление логотипа*/
+}
+.header__contacts_menu{
+    list-style-type: none; /*убрать маркеры*/
+    display: flex; /*элементы стали рядом*/
+    justify-content: space-between; /*разнести элементы по краям*/
+    background-position: right ;/*справо*/
+    margin-top: 18px;
+    padding: 0 112px ;
+}
+.header__contacts_menu li:hover{
     opacity: 0.8;/*осветление логотипа*/
 }
 .header__wrapper{
     flex-grow: 1;/*растягивает*/
     background-image: url("../content/header_element.png");
     background-repeat: no-repeat;/*не повторялся*/
-    background-size: contain;/*картинка попадала по высоте*/
-    background-position: right ;/*справо*/
+    box-sizing: border-box;
+    background-size: 45%;
+    background-position: right;/*справо*/
     margin-top: 115px;/*отступ*/
-    padding-bottom: 90px;/*отступ*/
-    margin-bottom: 93px;/*отступ*/
+    padding-bottom: 113px;/*отступ*/
+}
+.header_contacts__wrapper{
+    flex-grow: 1;/*растягивает*/
+    background-image: url("../content/background_contacts.png");
+    background-repeat: no-repeat;/*не повторялся*/
+    background-size: cover;/*картинка попадала по высоте*/
+    margin-top: 18px;
+    max-height: 250px;
+    box-sizing: border-box;
+    padding-bottom: 57px;
 }
 .header__title{/*название*/
     max-width: 506px;/*максимальная ширина*/
@@ -43,6 +71,18 @@
     line-height: 74px;/*интервал между буквами*/
     letter-spacing: 0.04em;/*междустрочный интервал*/
     color: #1F3F68;/*цвет*/
+}
+.header_contacts__title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 74px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
 }
 .header__text{/*текст*/
     margin-top: 39px;/*отступ*/
@@ -54,7 +94,18 @@
     color: #1F3F68;/*междустрочный интервал*/
     opacity: 0.6;/*прозрачность*/
 }
-.header__button{/*кнопка*/
+.header_contacts__text{
+    font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 auto;
+    max-width: 780px;
+}
+.header__button{
     margin-top: 70px;/*отступ от кнопочки до текста*/
     font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
     line-height: 26px;
@@ -72,15 +123,282 @@
     background: #418bcb/*свойство наведения на кнопку*/
 }
 .main{
-    display: flex;/*растянулись элементы*/
+    margin: 0 auto;
+    /*padding-left: 113px;*/
+}
+.contacts{
+   position: relative;
+    margin: 0 auto;
+    max-width: 940px;
+}
+.contacts_main__contacts{
+    display: flex;
+    justify-content: space-between;
+    max-width: 940px;
+    margin: 0 auto;
+    gap: 101px;
+}
+.main__contact-img{
+    position: relative;
+    height: 843px;
+}
+.contact-img{
+    display: flex;
+    max-height: 181px;
+    width: 300px;
+    margin-top: 120px;
+}
+.main__contact_address{
+    font-family:'Roboto', sans-serif;/*тип шрифта Roboto*/
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    margin-top: 56px;
+}
+.contact_address{
+    font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    opacity: 0.6;
+    max-width: 299px;
+    margin-top: 24px;
+}
+.contact_date{
+    display: flex;
+    flex-direction: column;
+}
+.contact_phone-title{
+    font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    margin-top: 40px;
+}
+.main__contacts_menu{
+    list-style-type: none; /*убрать маркеры*/
+    position: relative;
+    margin-top: 28px;
+    padding: 0;
+  }
+.phone_1{
+    display: flex;
+    gap: 19px;
+    text-decoration: none;/*убрать подчеркивание*/
+}
+.phone__img{
+    opacity: 0.5;
+}
+.phone__img:hover{
+    opacity: 1;
+}
+.phone__text{
+    font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+}
+.phone_2{
+    display: flex;
+    gap: 19px;
+    position: relative;
+    justify-content:left;
+    text-decoration: none;/*убрать подчеркивание*/
+    margin-top: 16px;
+}
+.online-service{
+    font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
+    font-weight: 500px;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    margin-top: 40px;
+}
+.main__contacts_online-service{
+    list-style-type: none; /*убрать маркеры*/
+    position: relative;
+    margin-top: 27px;
+    padding: 0;
+}
+.service__site{
+    display: flex;
+    gap: 18px;
+    position: relative;
+    justify-content:left;
+    text-decoration: none;/*убрать подчеркивание*/
+}
+.site-mail__img{
+    margin-bottom: 18px;
+    opacity: 0.5;
+}
+.site-mail__img:hover{
+    opacity: 1;
+}
+.site-mail__title{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    margin-bottom: 18px;
+}
+
+.main__contact-card{
+    padding: 0 30px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: #FFFFFF;
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    width: 540px;
+    height: 800px;
+    margin-top: 70px;
+}
+.contact-card-title{
+    font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    margin-top: 56px;
+
+}
+.full_name{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    opacity: 0.8;
+    margin-top: 48px;
+    box-sizing: border-box;
+}
+.card-name{
+    width: 428px;
+    height: 72px;
+    left: 670px;
+    top: 608px;
+    opacity: 0.4;
+    border: 1px solid #356EAD;
+    border-radius: 10px;
+    padding-left: 32px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+.full_email{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    opacity: 0.8;
+    margin-top: 32px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.card-email{
+    width: 100%;
+    height: 72px;
+    left: 670px;
+    top: 608px;
+    opacity: 0.4;
+    border: 1px solid #356EAD;
+    border-radius: 10px;
+    padding-left: 32px;
+    box-sizing: border-box;
+}
+.full_card-message{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    opacity: 0.8;
+    margin-top: 32px;
+    box-sizing: border-box;
+}
+.card-message{
+    width: 428px;
+    height: 144px;
+    left: 670px;
+    top: 608px;
+    opacity: 0.4;
+    border: 1px solid #356EAD;
+    border-radius: 10px;
+    padding-left: 32px;
+    padding-top: 21px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.main__message__button{
+    display: flex;
+    align-items: center;
+    background: #5A98D0;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    max-height: 72px;
+    margin: 72px 0;
+    width: 100%;
+}
+.main__message__button:hover{
+    background: #356EAD/*свойство наведения на кнопку*/
+}
+.card-message__button{
+    font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.card-message__button{
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;/*убрать подчеркивание*/
+    padding: 23px 183px;
+}
+.main__contact-map{
+    display: flex;
+    justify-content: center;
+    margin-top: 96px;
+}
+.iframe{
+    width: 940px;
+    height: 480px;
 }
 .main__container{ /*заданы одни свойства*/
     display: flex; /*логотипы стали в ряд*/
     flex-direction: column; /*стали друг под другом*/
-    height: 585px;
+    min-height: 585px;
 }
 .main__text{
-    margin: 64px 115px 64px 114px ;/*отступы*/
+    margin-top: 64px;/*отступы*/
     font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
     font-weight: 300;/*толщина*/
     font-size: 36px;/*размер текста*/
@@ -91,21 +409,22 @@
 }
 .main__client{
     display: flex;
-    justify-content: space-between;
-    height: 480px;
+    justify-content: center;
+    gap: 32px;
+    min-height: 480px;
+    margin-top: 64px;
 }
-.main__make-business{
-   /* position: relative;*/
-    margin: 0 32px 0 0;/*отступ*/
+.main__make-card{
     background: #FFFFFF;
     box-shadow: 5px 20px 50px
     rgba(16, 112, 177, 0.2);
     border-radius: 10px;
+    max-width: 358px;
 }
 .make-business__img{
     margin: 44px 117px 52px 70px;/*отступ*/
     width: 172px;
-    height: 121px;
+    min-height: 121px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,9 +461,14 @@
     line-height: 30px;
     letter-spacing: 0.05em;
     color: #5A98D0;
+    text-decoration: none;
+    opacity: 0.6;
+}
+.lear-more__text:hover{
+    opacity: 1;
 }
 .lear-more__vector{
-    margin: 8px 0px 47px 32px;
+    margin: 8px 0 47px 32px;
     opacity: 0.6;
 }
 .lear-more__vector:hover{
@@ -153,14 +477,6 @@
     font-weight: bold;
     opacity: 1;
 }
-.main__bring-technology{
-    margin: 0 32px 0 0;
-    width: 358px;
-    background: #FFFFFF;
-    box-shadow: 5px 20px 50px
-    rgba(16, 112, 177, 0.2);
-    border-radius: 10px;
-}
 .make-technology__img{
     margin: 44px 110px 45px 116px;/*отступ*/
     width: 132px;
@@ -168,34 +484,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.make-technology__title{
-    margin: 0 32px 15px 32px;/*отступ*/
-    max-width: 294px;/*максимальная ширина*/
-    font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
-    font-weight: 400;/*толщина*/
-    font-size: 20px;/*размер текста*/
-    line-height: 30px;/*интервал между буквами*/
-    letter-spacing: 0.05em;
-    color: #1F3F68;
-}
-.make-technology__text{
-    margin: 0 32px 28px 32px;/*отступ*/
-    max-width: 294px;/*максимальная ширина*/
-    font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0.05em;
-    color: #1F3F68;
-    opacity: 0.6;
-}
-.main__digital-product{
-    width: 359px;
-    background: #FFFFFF;
-    box-shadow: 5px 20px 50px
-    rgba(16, 112, 177, 0.2);
-    border-radius: 10px;
 }
 .make-digital-product__img{
     margin: 49px 117px 49px 95px;/*отступ*/
@@ -215,17 +503,6 @@
     letter-spacing: 0.05em;
     color: #1F3F68;
 }
-.make-digital-product__text{
-    margin: 0 32px 27px 32px;/*отступ*/
-    max-width: 295px;/*максимальная ширина*/
-    font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0.05em;
-    color: #1F3F68;
-    opacity: 0.6;
-}
 .main__finished-title{
     margin: 64px 0 0;
     font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
@@ -238,7 +515,7 @@
 }
 .main__finished-subtitle{
     margin: 32px 195px 32px;
-    width: 750px;
+    max-width: 750px;
     height: 52px;
     font-family: 'Roboto', sans-serif;/*тип шрифта Roboto*/
     font-weight: 400;
@@ -250,11 +527,12 @@
     color: #222222;
 }
 .main__smart-home{
-    position: relative;/*чтобы текст не вылетел за приделы блока*/
-}
-.smart-home__img{
-    width: 100%;
-    object-fit: cover;/*изменяться в зависимости от ширины контейнера*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    /*background-image: url("content/smart_home.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
 }
 .smart-home__text{/*текст в картинке*/
     position: absolute;
@@ -263,24 +541,15 @@
     line-height: 46px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
-    top: 64px;/*сверху*/
-    right: 64px;/*справа*/
+    margin-top: 64px;
+    margin-left: 678px;
 }
 .main__apps-wrapper{
     position: relative;
-    margin-top: 32px;/*отступ сверху*/
     display:flex;/*чтобы элементы стали рядом*/
     gap: 32px;/*растояние между элементами*/
-}
-.main__sparklite-app{
-    height: 417px;
-    width: 554px;
-    display:block;
-    position: relative;
-    border-radius: 10px;
-    background:
-            url("../content/main_background.png") center no-repeat,
-            url("../content/sparklite_app.png") 0  no-repeat;
+    margin-top: 32px;
+    justify-content: center;
 }
 .sparklite-app__text{
     position: absolute;
@@ -290,8 +559,8 @@
     line-height: 46px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
-    top: 32px;/*сверху*/
-    right: 339px;/*справа*/
+    margin-top: 32px;
+    margin-left: 32px;
 }
 .main__car-app{
     height: 417px;
@@ -299,9 +568,7 @@
     display:block;
     position: relative;
     border-radius: 10px;
-    background:
-            url("../content/main_background.png") center no-repeat,
-            url("../content/сar-кapetition_app.png") 0  no-repeat;
+    margin-top: 32px;
 }
 .car-app__text{
     position: absolute;
@@ -312,22 +579,28 @@
     letter-spacing: 0.05em;
     color: #FFFFFF;
     top: 32px;/*сверху*/
-    left: 32px;
+    left: 618px;
 }
 .footer {
-    background: #316099;
-    width: 1366px;
-    margin: 0 auto;
+    margin-top: 112px;
+    background-color: #316099;
+    min-height: 657px;
 }
-.footer__container{
-    position: relative;
-    display: flex; /*логотипы стали в ряд*/
-    flex-direction: column; /*стали друг под другом*/
-    margin: 1300px 0 0;
-
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+    width: 100%;
+}
+.footer_instead {
+    min-height: 390px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 36px;
 }
 .footer__wrapper{
-    height: 391px;
+    display: flex;
+    flex-direction: column;
 }
 .footer__title{
     font-family: 'Roboto', sans-serif;
@@ -336,20 +609,24 @@
     line-height: 46px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
-    margin: 91px 0 0;
-    padding-left: 113px;
-    width: 341px;
-    height: 92px;
+    max-width: 341px;
+    max-height: 92px;
+}
+.footer__text{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    opacity: 0.6;
+    max-width: 495px;
+    max-height: 80px;
+    margin-top: 32px;
 }
 .footer__button{
-    position: relative;
     background: #5A98D0;
-    width: 237px;
-    height: 56px;
-    display:flex;
-    margin: 0 0 0 1015px;
-}
-.button{/*кнопка*/
+    max-width: 237px;
+    max-height: 56px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -359,104 +636,60 @@
     color: #FFFFFF;
     text-decoration: none;/*убрать подчеркивание*/
     padding: 15px 79px;
+    display: inline-block;
 }
 .footer__button:hover{
     background: #418bcb/*свойство наведения на кнопку*/
 }
-.footer__text{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    letter-spacing: 0.05em;
-    color: #FFFFFF;
-    opacity: 0.6;
-    padding-left: 113px;
-    width: 495px;
-    height: 80px;
-}
-.footer_line{
-    border: 1px solid #FFFFFF;
+.line{
     opacity: 0.4;
-    margin: 0 0 64px;
-    width: 2000px ;
+    border: 1px solid #FFFFFF;
 }
-.footer__date{
+.footer_contacts ol{
     display: flex;
     justify-content: space-between;
-    min-height: 176px;
-    position: relative;
+    gap: 10px;
+    margin-top: 64px;
 }
-.footer__data-number-1{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #FFFFFF;
-    position: absolute;
-    margin: 4px;
-    left: 113px;
-}
-.footer__data-text{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+.footer_contacts ol li{
+    font-family:'Roboto', sans-serif;
     font-size: 16px;
     line-height: 26px;
     letter-spacing: 0.05em;
-    color: #FFFFFF;
-    position: absolute;
-    left: 155px;
-    width: 315px;
+    color: #ffffff;
+    max-width: 250px;
+    padding-left: 19px;
 }
-.footer__data-number-2{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #FFFFFF;
-    position: absolute;
-    margin: 4px;
-    left: 504px;
+.data-list{
+    list-style-type: none;
+    padding-left: 19px;
+    position: relative;
 }
-.footer__data-telephone{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    color: #FFFFFF;
+.data-list:nth-child(1)::before{
+    content: "A.";
     position: absolute;
-    left: 546px;
-    width: 316px;
+    left: -19px;
 }
-.footer__data-number-3{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #FFFFFF;
+.data-list:nth-child(2)::before{
+    content: "T.";
     position: absolute;
-    margin: 4px;
-    left: 894px;
+    left: -19px;
 }
-.footer__data-email{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    color: #FFFFFF;
+.data-list:nth-child(3)::before{
+    content: "E.";
     position: absolute;
-    left: 936px;
-    width: 316px;
+    left: -19px;
 }
 .footer__reserved{
-    font-family: 'Roboto', sans-serif;
+    font-family:'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
     opacity: 0.4;
-    width: 310px;
-    margin: 112px 0 64px 113px;
+    margin-top: 64px;
 }
-
-
 
 
 
