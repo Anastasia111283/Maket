@@ -57,7 +57,7 @@
     flex-grow: 1;/*растягивает*/
     background-image: url("../content/background_contacts.png");
     background-repeat: no-repeat;/*не повторялся*/
-    background-size: cover;/*картинка попадала по высоте*/
+    background-size: cover;/*картинка попадала по ширине*/
     margin-top: 18px;
     max-height: 250px;
     box-sizing: border-box;
@@ -559,8 +559,8 @@
     line-height: 46px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
-    margin-top: 32px;
-    margin-left: 32px;
+    top: 32px;
+    left: 32px;
 }
 .main__car-app{
     height: 417px;
