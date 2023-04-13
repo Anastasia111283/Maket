@@ -1,14 +1,13 @@
 .header{
-    /*фон в png, т.к нужна прозрачность*/
-    min-height: 400px;/*минимальная высота*/
     background-image: url("../content/header_background.png");
-    background-size: contain; /*для видимости картинки*/
+    background-size: cover; /*для видимости картинки*/
     display: flex;/*растянулись элементы*/
-    margin: 0 auto;
+    box-sizing: border-box;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
 }
 .header_contacts{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     margin: 0 auto;
 }
@@ -47,17 +46,16 @@
     flex-grow: 1;/*растягивает*/
     background-image: url("../content/header_element.png");
     background-repeat: no-repeat;/*не повторялся*/
-    box-sizing: border-box;
-    background-size: 45%;
+    background-size: contain;
     background-position: right;/*справо*/
     margin-top: 115px;/*отступ*/
-    padding-bottom: 113px;/*отступ*/
+    padding-bottom: 90px;/*отступ*/
 }
 .header_contacts__wrapper{
     flex-grow: 1;/*растягивает*/
     background-image: url("../content/background_contacts.png");
     background-repeat: no-repeat;/*не повторялся*/
-    background-size: cover;/*картинка попадала по ширине*/
+    background-size: contain;/*картинка попадала по высоте*/
     margin-top: 18px;
     max-height: 250px;
     box-sizing: border-box;
@@ -410,9 +408,9 @@
 .main__client{
     display: flex;
     justify-content: center;
-    gap: 32px;
+    gap: 30px;
     min-height: 480px;
-    margin-top: 64px;
+    margin-top: 60px;
 }
 .main__make-card{
     background: #FFFFFF;
@@ -530,9 +528,6 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    /*background-image: url("content/smart_home.jpg");*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
 }
 .smart-home__text{/*текст в картинке*/
     position: absolute;
@@ -547,9 +542,9 @@
 .main__apps-wrapper{
     position: relative;
     display:flex;/*чтобы элементы стали рядом*/
+    justify-content: center;
     gap: 32px;/*растояние между элементами*/
     margin-top: 32px;
-    justify-content: center;
 }
 .sparklite-app__text{
     position: absolute;

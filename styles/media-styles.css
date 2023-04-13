@@ -4,7 +4,12 @@
     }
 }
 @media (max-width: 1199.98px){
-
+    .container {
+        width: 900px;
+    }
+    .header__wrapper {
+        background-size: 48%;
+    }
 }
 @media (max-width: 991.98px){
 }
